@@ -1,0 +1,109 @@
+body{
+  /* height:10000px; */
+  background-color: white;
+}
+
+h1{
+  position: sticky;
+  word-wrap: break-word;
+  top: 50px;
+  color:black;
+  font-family: sans-serif;
+  text-align: right;
+  padding-right: 10%;
+  font-size:70px;
+  font-size: 5.4vw;
+}
+
+.sticky{
+  position: sticky;
+top: 30px;
+left: 30px;
+padding-bottom: 50px;
+/* opacity: 0.7; */
+}
+
+.sticky2{
+  position: sticky;
+top: 30px;
+left: 30px;
+padding-bottom: 50px;
+opacity: 0.5;
+mix-blend-mode: overlay;
+/* mix-blend-mode: lighten; */
+/* z-index: 1; */
+}
+
+.sticky3{
+  position: sticky;
+top: 30px;
+left: 30px;
+padding-bottom: 50px;
+opacity: 0.5;
+mix-blend-mode: screen;
+/* mix-blend-mode: lighten; */
+/* z-index: 1; */
+}
+
+.sticky4{
+  position: sticky;
+top: 30px;
+left: 30px;
+padding-bottom: 50px;
+opacity: 0.5;
+mix-blend-mode: overlay;
+/* mix-blend-mode: lighten; */
+/* z-index: 1; */
+}
+
+.pagebottom{
+  padding-bottom: 500px;
+}
+
+/* flying photo */
+
+.flyingphoto{
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  animation-name: flyingimg;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  opacity: 0.1;
+}
+
+@keyframes flyingimg{
+  0%  {right:0%; top:80%;}
+  25% {right:10%; top:20%;}
+  50% {right:200px; top:400px;}
+  75% {right:0px; top:200px;}
+  100% {right:0px; top:100px;}
+}
+
+/* shaking text */
+
+h1:hover{
+animation-name: shaketext;
+animation-duration: .5s;
+animation-iteration-count: infinite;
+animation-direction: alternate-reverse;
+}
+
+@keyframes shaketext {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* viewport */
+@media (orientation: portrait) {
+  body {
+    color: black;
+  }
+  h1{
+    color: white;
+  }
+}
